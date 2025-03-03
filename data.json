@@ -1,0 +1,9 @@
+{
+    "images": [
+        { "src": "https://source.unsplash.com/300x200/?forest", "text": "Een prachtig groen bos vol leven en rust." },
+        { "src": "https://source.unsplash.com/300x200/?mountain", "text": "Indrukwekkende bergtoppen die de hemel raken." },
+        { "src": "https://source.unsplash.com/300x200/?ocean", "text": "De eindeloze blauwe golven van de oceaan." },
+        { "src": "https://source.unsplash.com/300x200/?sunset", "text": "Een adembenemende zonsondergang aan de horizon." },
+        { "src": "https://source.unsplash.com/300x200/?cityscape", "text": "De levendige lichten van een moderne stad." }
+    ]
+}

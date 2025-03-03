@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <article class="card card--slider">   
+            <h2 id="js--rangeValue">0</h2>
+            <input id="js--slider" type="range" min="1" max="4" step="1">
+        </article>
+        <article class="card card--widget">
+            <img id="dynamicImage" src="" alt="Dynamische Afbeelding">
+            <h2 id="dynamicTitle"></h2>
+            <p id="dynamicText"></p>
+        </article>
+        <article class="card card--stopwatch">
+            <div class="stopwatch">0:0</div>
+            <button class="start">Start</button>
+            <button class="stop">Stop</button>
+            <button class="reset">Reset</button>
+        </article>
+    </div>
+    <script src="./main.js"></script>
+    <script src="./widget.js"></script>
+    <script src="./data.json"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+:root {
+    /* Variabelen voor kleuren */
+    --primary-color: #C02425;
+    --secondary-color: #F0CB35;
+    --background-color: #f4f4f4;
+    --button-bg-color-start: #4CAF50;
+    --button-bg-color-stop: #f44336;
+    --button-bg-color-reset: #008CBA;
+
+    /* Variabelen voor spacing */
+    --padding: 2rem;
+    --gap: 2rem;
+    --card-radius: 1rem;
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    width: 80%;
+    max-width: 80rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.card {
+    width: 30rem;
+    height: 30rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--box-shadow);
+    padding: var(--padding);
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card--slider {
+    gap: 3rem;
+}
+
+.card--slider > h2 {
+    font-size: 4rem;
+}
+
+.card--slider > input {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 5rem;
+    height: 2rem;
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+}
+
+.card--slider > input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: orange;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card--slider > input::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+}
+
+.card--widget {
+    gap: 2rem;
+}
+
+.card--widget img {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+.card--widget h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.card--widget p {
+    font-size: 1.6rem;
+    color: #666;
+}
+
+.card--stopwatch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.stopwatch {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+}
+
+.start {
+    background: var(--button-bg-color-start);
+    color: white;
+}
+
+.stop {
+    background: var(--button-bg-color-stop);
+    color: white;
+}
+
+.reset {
+    background: var(--button-bg-color-reset);
+    color: white;
+}
