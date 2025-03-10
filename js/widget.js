@@ -15,3 +15,4 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('Fout bij het laden van JSON:', error);
         });
 });
+    
