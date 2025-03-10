@@ -1,18 +1,39 @@
-document.addEventListener("DOMContentLoaded", function() {
-   fetch('data.json')
+function loadJSONData() {
+    fetch('./json/data.json') 
         .then(response => response.json())
         .then(data => {
-            const images = data.images; 
-
-            const randomIndex = Math.floor(Math.random() * images.length);
-            const selectedImage = images[randomIndex];
-
-            document.getElementById("dynamicImage").src = selectedImage.src;
-            document.getElementById("dynamicTitle").textContent = selectedImage.title;
-            document.getElementById("dynamicText").textContent = selectedImage.text;
+            jsonData = data;
+            loadDynamicContent(0);
         })
         .catch(error => {
-            console.error('Fout bij het laden van JSON:', error);
+            console.error('Fout bij het laden van JSON-data:', error);
         });
-});
+}
+
+function loadDynamicContent(index) {
+    const imageWidget = document.getElementById('dynamicImage');
+    const titleWidget = document.getElementById('dynamicTitle');
+    const textWidget = document.getElementById('dynamicText');
+
+    if (index >= 0 && index < jsonData.images.length) {
+        imageWidget.src = jsonData.images[index].src;
+        titleWidget.innerText = `Afbeelding ${index + 1}`;
+        textWidget.innerText = jsonData.images[index].text;
+    }
+}
+
+loadJSONData();
     
+function loadDynamicContent(index) {
+    const imageWidget = document.getElementById('dynamicImage');
+    const titleWidget = document.getElementById('dynamicTitle');
+    const textWidget = document.getElementById('dynamicText');
+
+    if (index >= 0 && index < jsonData.images.length) {
+        imageWidget.src = jsonData.images[index].src;
+        titleWidget.innerText = `Afbeelding ${index + 1}`;
+        textWidget.innerText = jsonData.images[index].text;
+    }
+}
+
+loadDynamicContent(0);

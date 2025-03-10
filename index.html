@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopwatch Dashboard</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="dashboard">
@@ -13,7 +13,7 @@
             <input id="js--slider" type="range" min="1" max="4" step="1">
         </article>
         <article class="card card--widget">
-            <img id="dynamicImage" src="" alt="Dynamische Afbeelding">
+            <img id="dynamicImage" src="./json/data.json" alt="Dynamische Afbeelding">
             <h2 id="dynamicTitle"></h2>
             <p id="dynamicText"></p>
         </article>
@@ -24,8 +24,8 @@
             <button class="reset">Reset</button>
         </article>
     </div>
-    <script src="./main.js"></script>
-    <script src="./widget.js"></script>
-    <script src="./data.json"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/widget.js"></script>
+    <script src="./json/data.json"></script>
 </body>
 </html>
