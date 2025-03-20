@@ -1,9 +1,25 @@
 const pokemonImage = document.getElementById("js--pokemon-image");
-console.log(pokemonImage);
-let pokemon = fetch("https://pokeapi.co/api/v2/pokemon/50")
+let randomNumber = Math.floor(Math.random() * 250 + 1);
+console.log(randomNumber);
+
+
+let pokemon = fetch("https://pokeapi.co/api/v2/pokemon/" + randomNumber)
     .then(function(response) {
         return response.json();
     })
     .then(function(realData) {
         pokemonImage.src = realData.sprites.front_default;
     });
+
+const catchButton = document.getElementById("js--catch-button");
+const pokemonText = document.getElementById("js--pokemon-text");
+console.log(pokemonText);
+catchButton.onclick = function() {
+    let catchNumber = Math.floor(Math.random() * 2);
+    if(catchNumber === 0) {
+        pokemonText.innerText = "The Pokemon is not caught!";
+    }
+    else{
+        pokemonText.innerText = "The Pokemon is caught!";
+    }
+}
