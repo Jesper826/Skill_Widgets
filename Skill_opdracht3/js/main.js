@@ -1,25 +1,31 @@
 const pokemonImage = document.getElementById("js--pokemon-image");
+const pokemonText = document.getElementById("js--pokemon-text");
+const catchButton = document.getElementById("js--catch-button");
+
 let randomNumber = Math.floor(Math.random() * 250 + 1);
-console.log(randomNumber);
 
-
-let pokemon = fetch("https://pokeapi.co/api/v2/pokemon/" + randomNumber)
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(realData) {
+fetch("https://pokeapi.co/api/v2/pokemon/" + randomNumber)
+    .then(response => response.json())
+    .then(realData => {
         pokemonImage.src = realData.sprites.front_default;
     });
 
-const catchButton = document.getElementById("js--catch-button");
-const pokemonText = document.getElementById("js--pokemon-text");
-console.log(pokemonText);
+let gamePlayed = false;
+
 catchButton.onclick = function() {
+    if (gamePlayed) return;
+
     let catchNumber = Math.floor(Math.random() * 2);
-    if(catchNumber === 0) {
-        pokemonText.innerText = "The Pokemon is not caught!";
+    
+    if (catchNumber === 0) {
+        pokemonText.innerText = "The Pokémon is not caught! Game Over.";
+        pokemonText.style.color = "red";
+    } else {
+        pokemonText.innerText = "The Pokémon is caught! Game Over.";
+        pokemonText.style.color = "green";
     }
-    else{
-        pokemonText.innerText = "The Pokemon is caught!";
-    }
-}
+
+    catchButton.disabled = true;
+    catchButton.style.backgroundColor = "gray";
+    gamePlayed = true;
+};
