@@ -88,3 +88,14 @@ h1 {
     background-color: gray;
     cursor: not-allowed;
 }
+
+#search-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
