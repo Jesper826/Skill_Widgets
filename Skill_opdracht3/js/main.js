@@ -28,4 +28,4 @@ catchButton.onclick = function() {
     catchButton.disabled = true;
     catchButton.style.backgroundColor = "gray";
     gamePlayed = true;
-};
+};  
