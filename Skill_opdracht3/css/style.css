@@ -10,11 +10,9 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #4da69e; /* Meer overeenkomend met de eerste afbeelding */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    background-color: #4da69e;
+    display: grid;
+    place-items: center;
     height: 100vh;
     margin: 0;
 }
@@ -26,20 +24,20 @@ h1 {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
     width: 60%;
+    justify-items: center;
 }
 
-.search-box {
+.search-box, .description, .card {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
     width: 100%;
+    text-align: center;
 }
 
 .search-box input {
@@ -51,20 +49,13 @@ h1 {
 }
 
 .description {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: justify;
-    width: 100%;
 }
 
 .card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: grid;
+    gap: 10px;
+    justify-items: center;
     width: 80%;
 }
 
@@ -73,7 +64,8 @@ h1 {
     height: auto;
 }
 
-#js--catch-button {
+/* Knoppen */
+#js--catch-button, #search-button {
     background-color: red;
     color: white;
     border: none;
@@ -87,15 +79,4 @@ h1 {
 #js--catch-button:disabled {
     background-color: gray;
     cursor: not-allowed;
-}
-
-#search-button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1.6rem;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
 }
