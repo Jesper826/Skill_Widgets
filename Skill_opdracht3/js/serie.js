@@ -32,5 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    fetchShow("Girls");
+    
 });
