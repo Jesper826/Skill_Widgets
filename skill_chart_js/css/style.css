@@ -1,0 +1,88 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.6rem;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+}
+
+/* Dashboard container met CSS Grid */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 80rem;
+    width: 100%;
+    justify-items: center;
+}
+
+/* Stijl voor grafiek containers */
+.chart-container {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Canvas grootte beperken */
+canvas {
+    width: 36rem !important;
+    height: 36rem !important;
+}
+
+.chart3 {
+    width: 35rem !important;
+    height: 35rem !important;
+}
+
+/* Tijd-container naar rechtsboven verplaatsen */
+.time-container {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    background: #f1f1f1;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer stijlen */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+}
